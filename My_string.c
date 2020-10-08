@@ -3,6 +3,11 @@
 #include "My_strings.h"
 
 int my_string_t_create(my_string_t* str, size_t buf_size){
+    /*
+    * A function to create my_string with given buffer size
+    * @param my_string_t* str My string that needs to be created
+    * @param size_t buf_size The size of it's buffer
+    */
     if(!str){
         return NOT_FOUND_CODE;
     }
