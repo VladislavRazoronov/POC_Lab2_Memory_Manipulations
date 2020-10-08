@@ -1,0 +1,5 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 3.8)
+
+PROJECT(My_Strings C)
+
+ADD_EXECUTABLE(Custom_strings My_string.c Strinf_editing.c My_strings.h)
