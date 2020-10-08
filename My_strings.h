@@ -24,3 +24,17 @@ const char* my_str_get_cstr(my_string_t* str);
 int my_str_resize(my_string_t* str, size_t new_size, char sym);
 
 int my_str_copy(const my_string_t* from,  my_string_t* to, int reserve);
+
+int my_str_popback(my_string_t* str);
+
+int my_str_insert_cstr(my_string_t* str, char* word);
+
+int my_str_read_file(my_string_t* str, FILE* file);
+
+int my_str_read(my_string_t* str);
+
+int my_str_read_file_delim(my_string_t* str, FILE* file, char delimiter);
+
+int my_str_write(const my_string_t* str);
+
+int my_str_write_file(const my_string_t* str, FILE* file);
