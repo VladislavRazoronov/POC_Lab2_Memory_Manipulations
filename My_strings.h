@@ -1,12 +1,15 @@
+/*Error codes */
 const int NOT_FOUND_CODE = -1, MEMORY_ALLOCATION_ERR = -2, RANGE_ERR = -3, IO_READ_ERR = -4;
 const int IO_WRITE_ERR = -5, NULL_PTR_ERROR = -8, BUFF_SIZE_ERR = -9;
 
+/*Main class*/
 typedef struct {
     size_t capacity_m;
     size_t size_m;
     char* data;
 } my_string_t;
 
+/*Function declarations*/
 int my_string_t_create(my_string_t* str, size_t buf_size);
 
 int my_str_free(my_string_t* str);

@@ -3,7 +3,7 @@
 
 int my_str_free(my_string_t* str){
     /*
-    * Frees memory used by given my_string
+    * Frees memory used by given my_string(VR)
     * @param my_string_t* str my_string that will be used
     */
     if (str){
@@ -16,7 +16,7 @@ int my_str_free(my_string_t* str){
 int my_str_reserve(my_string_t* str, size_t buf_size){
     /*
     * Reserves extra memory for my_string equal to given buffer size
-    * if the given size is smaller does nothing
+    * if the given size is smaller does nothing(VR)
     * @param my_string_t* str my_string that will be used
     * @param size_t buf_size The new capacity of my_string
     */
@@ -40,7 +40,7 @@ int my_str_reserve(my_string_t* str, size_t buf_size){
 int my_str_resize(my_string_t* str, size_t new_size, char sym){
     /*
     * Resizes given my_string to given size, and fills all exess
-    * space with given char
+    * space with given char(VR)
     * @param my_string_t* str my_string that will be used
     * @param size_t new_size The new size of my_string
     * @param char sym The char to fill my_string if new size is bigger
@@ -65,7 +65,7 @@ int my_str_resize(my_string_t* str, size_t new_size, char sym){
 int my_str_insert_cstr(my_string_t* str, char* word){
     /*
     * Inserts given cstring at end of my_string and resizes
-    * it if needed.
+    * it if needed.(VR)
     * @param my_string_t* str my_string that will be used
     * @param char* word cstring to add to my_string
     */
@@ -87,7 +87,7 @@ int my_str_insert_cstr(my_string_t* str, char* word){
 
 int my_str_copy(const my_string_t* from,  my_string_t* to, int reserve){
     /*
-    * copies symbols from first my_string to other my_string
+    * copies symbols from first my_string to other my_string(VR)
     * @param const my_string_t* from my_string that will be copied
     * @param my_string_t* to my_string that from will be copied into
     * @param int reserve If bigger than 0 also fills to with zeroes
@@ -103,7 +103,7 @@ int my_str_copy(const my_string_t* from,  my_string_t* to, int reserve){
 
 int my_str_popback(my_string_t* str){
     /*
-    * Removes last element from my_string
+    * Removes last element from my_string(VR)
     * @param my_string_t* str my_string that will be used
     */
     if(!str){
@@ -113,4 +113,20 @@ int my_str_popback(my_string_t* str){
         return 0;
     }
     str->size_m -= 1;
+}
+
+int my_str_shrink_to_fit(my_string_t* str){
+    /*
+    * Shrinks string's buffer to string size
+    * @param my_string_t* str String that will be shrunk
+    */
+    if (!str){
+        return NULL_PTR_ERROR;
+    }
+    if(my_str_reserve(str, str->size_m) > 0){
+        return 0;
+    }
+    else{
+        return MEMORY_ALLOCATION_ERR;
+    }
 }

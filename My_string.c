@@ -4,7 +4,7 @@
 
 int my_string_t_create(my_string_t* str, size_t buf_size){
     /*
-    * A function to create my_string with given buffer size
+    * A function to create my_string with given buffer size(VR)
     * @param my_string_t* str my_string that will be used
     * @param size_t buf_size The size of it's buffer
     */
@@ -24,7 +24,7 @@ int my_string_t_create(my_string_t* str, size_t buf_size){
 
 size_t my_str_size(const my_string_t* str){
     /*
-    * Returns the size of my_string given 
+    * Returns the size of my_string given (VR)
     * @param my_string_t* str my_string that will be used
     */
     if(!str){
@@ -35,7 +35,7 @@ size_t my_str_size(const my_string_t* str){
 
 size_t my_str_capacity(const my_string_t* str){
     /*
-    * Returns maximum capacity of my_string given
+    * Returns maximum capacity of my_string given(VR)
     * @param my_string_t* str my_string that will be used
     */
     if(!str){
@@ -46,7 +46,7 @@ size_t my_str_capacity(const my_string_t* str){
 
 int my_str_empty(const my_string_t* str){
     /*
-    * Returns true if given my_string is emplty, else returns false
+    * Returns true if given my_string is emplty, else returns false(VR)
     * @param my_string_t* str my_string that will be used
     */
     if(!str){
@@ -57,7 +57,7 @@ int my_str_empty(const my_string_t* str){
 
 int my_str_getc(const my_string_t* str, size_t index){
     /*
-    * Returns char at given indes in str
+    * Returns char at given indes in str(VR)
     * @param my_string_t* str my_string that will be used
     * @param size_t index Index of required element
     */
@@ -72,7 +72,7 @@ int my_str_getc(const my_string_t* str, size_t index){
 
 const char* my_str_get_cstr(my_string_t* str){
     /*
-    * Returns char* representation of given my_string
+    * Returns char* representation of given my_string(VR)
     * @param my_string_t* str my_string that will be used
     */
     if(!str){
