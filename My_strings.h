@@ -41,3 +41,33 @@ int my_str_read_file_delim(my_string_t* str, FILE* file, char delimiter);
 int my_str_write(const my_string_t* str);
 
 int my_str_write_file(const my_string_t* str, FILE* file);
+
+int my_str_shrink_to_fit(my_string_t* str);
+
+int my_str_clear(my_string_t* str);
+
+int my_str_insert_c(my_string_t* str, char c, size_t pos);
+
+int my_str_insert(my_string_t* str, const my_string_t* from, size_t pos);
+
+int my_str_append(my_string_t* str, const my_string_t* from);
+
+int my_str_append_cstr(my_string_t* str, const char* from);
+
+int my_str_append_c(my_string_t* str, char c);
+
+int my_str_substr(const my_string_t* from, my_string_t* to, size_t beg, size_t end);
+
+int my_str_substr_cstr(const my_string_t* from, char* to, size_t beg, size_t end);
+
+int my_str_erase(my_string_t* str, size_t beg, size_t end);
+
+int my_str_cmp_cstr(const my_string_t* str1, const char* cstr2);
+
+int my_str_cmp(const my_string_t* str1, const my_string_t* str2);
+
+size_t my_str_find_if(const my_string_t* str, size_t beg, int (*predicat)(int));
+
+size_t my_str_find_c(const my_string_t* str, char tofind, size_t from);
+
+size_t my_str_find(const my_string_t* str, const my_string_t* tofind, size_t from);

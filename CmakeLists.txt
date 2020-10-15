@@ -1,5 +1,11 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.8)
+set(CMAKE_C_STANDARD 99)
+
+find_package(LibMy_strings)
 
 PROJECT(My_Strings C)
+SET(String_operators My_string.c String_editing.c String_I-O.c String_access.c String_search.c String_compare.c My_strings.h)
 
-ADD_EXECUTABLE(Custom_strings My_string.c String_editing.c String_I-O.c My_strings.h)
+ADD_EXECUTABLE(My_Strings ${String_operators})
+
+target_include_directories(MyStrings PRIVATE${LibMy_Strings_INCLUDE_DIRS})
